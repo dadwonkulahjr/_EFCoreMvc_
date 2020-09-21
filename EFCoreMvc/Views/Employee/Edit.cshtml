@@ -1,0 +1,48 @@
+﻿@model Employee
+@{ 
+    ViewBag.Title = "Edit Employee";
+}
+
+<h2 class="text-info">
+    Edit Employee
+</h2>
+<hr />
+
+<form method="post">
+    <div class="row form-group">
+        <label class="col-form-label col-md-2" asp-for="@Model.Name"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Name" class="form-control" placeholder="Name..." />
+            <span class="text-danger" asp-validation-for="@Model.Name"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <label class="col-form-label col-md-2" asp-for="@Model.Email"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Email" class="form-control" placeholder="Email..." />
+            <span class="text-danger" asp-validation-for="@Model.Email"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <label class="col-form-label col-md-2" asp-for="@Model.Gender"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Gender" class="form-control" placeholder="Gender..." />
+            <span class="text-danger" asp-validation-for="@Model.Gender"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <label class="col-form-label col-md-2" asp-for="@Model.Salary"></label>
+        <div class="col-sm-10">
+            <input asp-for="@Model.Salary" class="form-control" placeholder="Salary..." />
+            <span class="text-danger" asp-validation-for="@Model.Salary"></span>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-10">
+          <button class="btn btn-outline-success" type="submit">Update</button>
+            <a asp-action="Index" asp-controller="Employee" class="btn btn-outline-secondary">Back</a>
+        </div>
+    </div>
+
+</form>
+
