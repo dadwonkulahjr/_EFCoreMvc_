@@ -35,8 +35,8 @@ namespace EFCoreMvc.Controllers
             {
                 return View(employee);
             }
-
-            return RedirectToAction("/Error");
+            Response.StatusCode = 404;
+            return View("EmployeeNotFound", id);
         }
         [HttpPost]
         public IActionResult Edit(Employee employee)
@@ -71,7 +71,10 @@ namespace EFCoreMvc.Controllers
             {
                 return View(employee);
             }
-            return RedirectToAction("/ErrorHandler/Error");
+
+            Response.StatusCode = 404;
+            return View("EmployeeNotFound", id);
+
         }
         [HttpGet]
         public IActionResult Delete(int id)
@@ -81,7 +84,8 @@ namespace EFCoreMvc.Controllers
             {
                 return View(employee);
             }
-            return RedirectToAction("/ErrorHandler/Error");
+            Response.StatusCode = 404;
+            return View("EmployeeNotFound", id);
         }
         [HttpPost]
         public IActionResult Delete(Employee model)
@@ -91,8 +95,8 @@ namespace EFCoreMvc.Controllers
             {
                 return RedirectToAction("Index", "Employee");
             }
-
-            return RedirectToAction("/ErrorHandler/Error");
+            Response.StatusCode = 404;
+            return View("EmployeeNotFound", model.EmployeeId);
         }
     }
 }
