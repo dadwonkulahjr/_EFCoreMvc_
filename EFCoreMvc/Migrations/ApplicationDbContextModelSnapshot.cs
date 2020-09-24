@@ -26,8 +26,10 @@ namespace EFCoreMvc.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Departmen")
-                        .HasColumnType("int");
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasColumnName("Department")
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -49,9 +51,6 @@ namespace EFCoreMvc.Migrations
                         .IsRequired()
                         .HasColumnType("decimal(18, 2)");
 
-                    b.Property<int>("SomeTestProperty")
-                        .HasColumnType("int");
-
                     b.HasKey("EmployeeId");
 
                     b.ToTable("Employees");
@@ -60,32 +59,29 @@ namespace EFCoreMvc.Migrations
                         new
                         {
                             EmployeeId = 1,
-                            Departmen = 3,
+                            Department = "Accountant",
                             Email = "wonkulahp@yahoo.com",
                             Gender = "Female",
                             Name = "Precious K Wonkulah",
-                            Salary = 30000m,
-                            SomeTestProperty = 0
+                            Salary = 7000m
                         },
                         new
                         {
                             EmployeeId = 2,
-                            Departmen = 0,
-                            Email = "john@gmail.com",
-                            Gender = "Male",
-                            Name = "John Brown",
-                            Salary = 6000m,
-                            SomeTestProperty = 0
+                            Department = "HR",
+                            Email = "dacious@outlook.com",
+                            Gender = "Female",
+                            Name = "Dacious R Wonkulah",
+                            Salary = 5000m
                         },
                         new
                         {
                             EmployeeId = 3,
-                            Departmen = 2,
-                            Email = "dacious@hotmail.com",
-                            Gender = "Female",
-                            Name = "Dacious R Wonkulah",
-                            Salary = 250m,
-                            SomeTestProperty = 0
+                            Department = "IT",
+                            Email = "john@hotmail.com",
+                            Gender = "Male",
+                            Name = "John Brown",
+                            Salary = 5000m
                         });
                 });
 #pragma warning restore 612, 618

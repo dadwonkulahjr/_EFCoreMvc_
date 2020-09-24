@@ -2,21 +2,22 @@
 
 namespace EFCoreMvc.Migrations
 {
-    public partial class AddSomeTestProperty : Migration
+    public partial class AddDepartment : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<int>(
-                name: "SomeTestProperty",
+            migrationBuilder.AddColumn<string>(
+                name: "Department",
                 table: "Employees",
+                type: "nvarchar(20)",
                 nullable: false,
-                defaultValue: 0);
+                defaultValue: "");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "SomeTestProperty",
+                name: "Department",
                 table: "Employees");
         }
     }

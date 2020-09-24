@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreMvc.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200924055842_AddDepartment")]
-    partial class AddDepartment
+    [Migration("20200924140110_AddingInitialSeedData")]
+    partial class AddingInitialSeedData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,8 +28,10 @@ namespace EFCoreMvc.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Departmen")
-                        .HasColumnType("int");
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasColumnName("Department")
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -59,29 +61,29 @@ namespace EFCoreMvc.Migrations
                         new
                         {
                             EmployeeId = 1,
-                            Departmen = 3,
+                            Department = "Accountant",
                             Email = "wonkulahp@yahoo.com",
                             Gender = "Female",
                             Name = "Precious K Wonkulah",
-                            Salary = 30000m
+                            Salary = 7000m
                         },
                         new
                         {
                             EmployeeId = 2,
-                            Departmen = 0,
-                            Email = "john@gmail.com",
-                            Gender = "Male",
-                            Name = "John Brown",
-                            Salary = 6000m
+                            Department = "HR",
+                            Email = "dacious@outlook.com",
+                            Gender = "Female",
+                            Name = "Dacious R Wonkulah",
+                            Salary = 5000m
                         },
                         new
                         {
                             EmployeeId = 3,
-                            Departmen = 2,
-                            Email = "dacious@hotmail.com",
-                            Gender = "Female",
-                            Name = "Dacious R Wonkulah",
-                            Salary = 250m
+                            Department = "IT",
+                            Email = "john@hotmail.com",
+                            Gender = "Male",
+                            Name = "John Brown",
+                            Salary = 5000m
                         });
                 });
 #pragma warning restore 612, 618

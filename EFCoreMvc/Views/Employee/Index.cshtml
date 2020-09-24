@@ -23,6 +23,7 @@
                 <th>Office Email</th>
                 <th>Gender</th>
                 <th>Salary</th>
+                <th>Department</th>
             </tr>
         </thead>
         @foreach (var emp in Model)
@@ -34,6 +35,7 @@
                     <td>@emp.Email</td>
                     <td>@emp.Gender</td>
                     <td>@emp.Salary.Value.ToString("c")</td>
+                    <td>@emp.Department</td>
                     <td>
                         <a asp-action="Edit" asp-controller="Employee" class="btn btn-outline-dark mb-2" asp-route-id="@emp.EmployeeId">Edit</a>
                         <a asp-action="Details" asp-controller="Employee" class="btn btn-outline-info mb-2" asp-route-id="@emp.EmployeeId">View</a>

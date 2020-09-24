@@ -39,6 +39,15 @@
         </div>
     </div>
     <div class="row form-group">
+        <label class="col-form-label col-md-2" asp-for="@Model.Department"></label>
+        <div class="col-sm-10">
+            <select class="custom-select" asp-for="@Model.Department" asp-items="Html.GetEnumSelectList<Department>()">
+                <option value="">Select department</option>
+            </select>
+            <span class="text-danger" asp-validation-for="@Model.Department"></span>
+        </div>
+    </div>
+    <div class="row form-group">
         <div class="col-sm-10">
             <button type="submit" class="btn btn-outline-success">Create</button>
             <a asp-controller="Employee" asp-action="Index" class="btn btn-outline-secondary">Back</a>

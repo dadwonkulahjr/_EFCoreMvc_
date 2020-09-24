@@ -2,24 +2,24 @@
 
 namespace EFCoreMvc.Migrations
 {
-    public partial class InitialListOfData : Migration
+    public partial class AddingInitialSeedData : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.InsertData(
                 table: "Employees",
-                columns: new[] { "EmployeeId", "Office Email", "Sex", "FullName", "Salary" },
-                values: new object[] { 1, "wonkulahp@yahoo.com", "Female", "Precious K Wonkulah", 30000m });
+                columns: new[] { "EmployeeId", "Department", "Office Email", "Sex", "FullName", "Salary" },
+                values: new object[] { 1, "Accountant", "wonkulahp@yahoo.com", "Female", "Precious K Wonkulah", 7000m });
 
             migrationBuilder.InsertData(
                 table: "Employees",
-                columns: new[] { "EmployeeId", "Office Email", "Sex", "FullName", "Salary" },
-                values: new object[] { 2, "john@gmail.com", "Male", "John Brown", 6000m });
+                columns: new[] { "EmployeeId", "Department", "Office Email", "Sex", "FullName", "Salary" },
+                values: new object[] { 2, "HR", "dacious@outlook.com", "Female", "Dacious R Wonkulah", 5000m });
 
             migrationBuilder.InsertData(
                 table: "Employees",
-                columns: new[] { "EmployeeId", "Office Email", "Sex", "FullName", "Salary" },
-                values: new object[] { 3, "dacious@hotmail.com", "Female", "Dacious R Wonkulah", 250m });
+                columns: new[] { "EmployeeId", "Department", "Office Email", "Sex", "FullName", "Salary" },
+                values: new object[] { 3, "IT", "john@hotmail.com", "Male", "John Brown", 5000m });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

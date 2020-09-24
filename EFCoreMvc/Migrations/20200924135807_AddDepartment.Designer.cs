@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreMvc.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200923232254_InitialListOfData")]
-    partial class InitialListOfData
+    [Migration("20200924135807_AddDepartment")]
+    partial class AddDepartment
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,6 +27,11 @@ namespace EFCoreMvc.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasColumnName("Department")
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -51,32 +56,6 @@ namespace EFCoreMvc.Migrations
                     b.HasKey("EmployeeId");
 
                     b.ToTable("Employees");
-
-                    b.HasData(
-                        new
-                        {
-                            EmployeeId = 1,
-                            Email = "wonkulahp@yahoo.com",
-                            Gender = "Female",
-                            Name = "Precious K Wonkulah",
-                            Salary = 30000m
-                        },
-                        new
-                        {
-                            EmployeeId = 2,
-                            Email = "john@gmail.com",
-                            Gender = "Male",
-                            Name = "John Brown",
-                            Salary = 6000m
-                        },
-                        new
-                        {
-                            EmployeeId = 3,
-                            Email = "dacious@hotmail.com",
-                            Gender = "Female",
-                            Name = "Dacious R Wonkulah",
-                            Salary = 250m
-                        });
                 });
 #pragma warning restore 612, 618
         }

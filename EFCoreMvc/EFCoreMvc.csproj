@@ -7,8 +7,16 @@
   <ItemGroup>
     <Compile Remove="Migrations\20200923230830_InitialMigration.cs" />
     <Compile Remove="Migrations\20200923230830_InitialMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200923232254_InitialListOfData.cs" />
+    <Compile Remove="Migrations\20200923232254_InitialListOfData.Designer.cs" />
     <Compile Remove="Migrations\20200924055605_AddDepartment.cs" />
     <Compile Remove="Migrations\20200924055605_AddDepartment.Designer.cs" />
+    <Compile Remove="Migrations\20200924055842_AddDepartment.cs" />
+    <Compile Remove="Migrations\20200924055842_AddDepartment.Designer.cs" />
+    <Compile Remove="Migrations\20200924060115_AddSomeTestProperty.cs" />
+    <Compile Remove="Migrations\20200924060115_AddSomeTestProperty.Designer.cs" />
+    <Compile Remove="Migrations\20200924131703_AddingDepartment.cs" />
+    <Compile Remove="Migrations\20200924131703_AddingDepartment.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

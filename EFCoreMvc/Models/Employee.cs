@@ -26,8 +26,8 @@ namespace EFCoreMvc.Models
         [Column(name: "Sex", TypeName = "nvarchar(20)")]
         public Gender? Gender { get; set; }
         [Required]
-        //[Column(name: "Department", TypeName = "nvarchar(20)")]
-        public Department? Departmen { get; set; }
-        public int SomeTestProperty { get; set; }
+        [Column(name: "Department", TypeName = "nvarchar(20)")]
+        public Department? Department { get; set; }
+       
     }
 }
