@@ -17,7 +17,7 @@ namespace EFCoreMvc.Models
                     EmployeeId = 1,
                     Name = "Mike Books",
                     Email = "mike@gmail.com",
-                    Gender = "Male",
+                    Gender =  Gender.Male,
                     Salary = 5000m
                 },
                   new Employee()
@@ -25,7 +25,7 @@ namespace EFCoreMvc.Models
                     EmployeeId = 2,
                     Name = "Mary James",
                     Email = "mike@yahoo.com",
-                    Gender = "Female",
+                    Gender = Gender.Female,
                     Salary = 6500
                 },
 
@@ -34,7 +34,7 @@ namespace EFCoreMvc.Models
                     EmployeeId = 3,
                     Name = "Sam Johnson",
                     Email = "sam@hotmail.com",
-                    Gender = "Male",
+                    Gender = Gender.Male,
                     Salary = 8000
                 },
                   new Employee()
@@ -42,7 +42,7 @@ namespace EFCoreMvc.Models
                     EmployeeId = 4,
                     Name = "Princess Walker",
                     Email = "princess@outlook.com",
-                    Gender = "Female",
+                    Gender =Gender.Female,
                     Salary = 7000
                 },
             };
@@ -54,9 +54,19 @@ namespace EFCoreMvc.Models
             return employee;
         }
 
-        public Employee GetEmployee(int EmployeeId)
+        public Employee DeleteEmployee(int id)
         {
-            return _employees.FirstOrDefault(x => x.EmployeeId == EmployeeId);
+            Employee employee = _employees.FirstOrDefault(x => x.EmployeeId == id);
+            if (employee != null)
+            {
+                _employees.Remove(employee);
+            }
+            return employee;
+        }
+
+        public Employee GetEmployee(int id)
+        {
+            return _employees.FirstOrDefault(x => x.EmployeeId == id);
         }
 
         public IEnumerable<Employee> GetListOfEmployees()
@@ -67,7 +77,7 @@ namespace EFCoreMvc.Models
         public Employee UpdateEmployee(Employee updatedEmployee)
         {
             Employee employee = _employees.FirstOrDefault(x => x.EmployeeId == updatedEmployee.EmployeeId);
-            if(updatedEmployee != null)
+            if (updatedEmployee != null)
             {
                 employee.Name = updatedEmployee.Name;
                 employee.Email = updatedEmployee.Email;

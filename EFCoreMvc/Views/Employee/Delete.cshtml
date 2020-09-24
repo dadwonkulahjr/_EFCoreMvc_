@@ -1,0 +1,20 @@
+﻿@model Employee
+@{ 
+    ViewBag.Title = "Delete Employee";
+}
+
+<h2 class="text-info">
+    Delete employee
+</h2>
+<hr />
+<h4>
+    Delete confirmation
+</h4>
+<div class="alert alert-danger">
+    Are you sure want to delete this employee @Model.Name?
+    <form method="post" asp-controller="Employee" asp-action="Delete">
+        <input hidden="hidden" asp-for="@Model.EmployeeId" />
+        <button type="submit" class="btn btn-outline-danger">Yes</button>
+        <a asp-action="Index" asp-controller="Employee" class="btn btn-outline-primary">No</a>
+    </form>
+</div>

@@ -7,8 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EFCoreMvc.Controllers
 {
+   //[Route("[controller]")]
     public class HomeController : Controller
     {
+       
+        //[Route("[action]")]
         public IActionResult Index()
         {
             ViewData["Message"] = "Hi, Welcome Dev tuseTheProgrammer";

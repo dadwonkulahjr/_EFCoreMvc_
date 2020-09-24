@@ -9,9 +9,10 @@ namespace EFCoreMvc.Models
     public interface IEmployeeRepo
     {
         Employee Add(Employee employee);
-        Employee GetEmployee(int EmployeeId);
+        Employee GetEmployee(int id);
         Employee UpdateEmployee(Employee updatedEmployee);
         IEnumerable<Employee> GetListOfEmployees();
+        Employee DeleteEmployee(int id);
 
 
     }

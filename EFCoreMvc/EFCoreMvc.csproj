@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200923230830_InitialMigration.cs" />
+    <Compile Remove="Migrations\20200923230830_InitialMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200924055605_AddDepartment.cs" />
+    <Compile Remove="Migrations\20200924055605_AddDepartment.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
