@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,6 +31,8 @@ namespace EFCoreMvc
 
             });
             services.AddScoped<IEmployeeRepo, SQLRepository>();
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
             //services.AddDbContextPool<ApplicationDbContext>(options =>
             //{
             //    options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
@@ -52,6 +55,7 @@ namespace EFCoreMvc
             }
             //app.UseWelcomePage();
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseMvc(options =>
             {
                 options.MapRoute(
