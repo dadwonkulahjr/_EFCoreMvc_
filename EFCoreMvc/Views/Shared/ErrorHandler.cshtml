@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Error 404";
+}
+
+<h2 class="text-info">
+    404 Error
+</h2>
+<hr />
+
+<div class="alert alert-danger">
+    <h1>
+        @ViewBag.ErrorMessage
+    </h1>
+</div>
+<a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">
+    Click the link to back home
+</a>

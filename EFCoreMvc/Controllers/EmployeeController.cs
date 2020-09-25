@@ -63,9 +63,12 @@ namespace EFCoreMvc.Controllers
             }
             return View();
         }
-
+        #region
+        //After throwing an Exception
+        //for testing purpose.
         public IActionResult Details(int id)
         {
+            throw new Exception("tuseTheProgrammer just thrown an exception");
             Employee employee = _repository.GetEmployee(id);
             if (employee != null)
             {
@@ -76,6 +79,7 @@ namespace EFCoreMvc.Controllers
             return View("EmployeeNotFound", id);
 
         }
+        #endregion
         [HttpGet]
         public IActionResult Delete(int id)
         {
