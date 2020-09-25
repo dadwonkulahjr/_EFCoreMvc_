@@ -31,8 +31,11 @@ namespace EFCoreMvc
 
             });
             services.AddScoped<IEmployeeRepo, SQLRepository>();
-            services.AddIdentity<IdentityUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+
+
+            }).AddEntityFrameworkStores<ApplicationDbContext>();
             //services.AddDbContextPool<ApplicationDbContext>(options =>
             //{
             //    options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
