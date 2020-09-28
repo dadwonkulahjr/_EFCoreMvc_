@@ -1,113 +1,106 @@
-﻿@*@inject SignInManager<IdentityUser> _signInManager*@
+﻿@inject SignInManager<AppUser> _signInManager;
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    @*<environment include="Development">
-            <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
-            <script src="~/lib/jquery/jquery.js"></script>
-            <script src="~/lib/jquery-validate/jquery.validate.js"></script>
-            <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
-            <script src="~/lib/bootstrap/js/bootstrap.js"></script>
-        </environment>*@
-    <title>@ViewBag.Title EFCoreMvc</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <meta name="viewport" content="width=device-width" />
+    <environment include="Development">
+        <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoS" crossorigin="anonymous"
+              asp-fallback-href="~/lib/bootstrap/css/bootstrap.css"
+              asp-suppress-fallback-integrity="true"
+              asp-fallback-test-class="sr-only"
+              asp-fallback-test-property="position"
+              asp-fallback-test-value="absolute">
+        <script src="~/lib/jquery/jquery.js"></script>
+        <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+        <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+    </environment>
+    <title>@ViewBag.Title</title>
+    <link href="~/css/site.css" rel="stylesheet" />
 </head>
-<body style="margin-top:100px;">
+<body style="margin-top:100px">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3 fixed-top">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
             <div class="container">
-                <a class="navbar-brand" asp-action="Index" asp-controller="Home">EFCoreMvc</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+
+                <a asp-action="index" asp-controller="home" class="navbar-brand">
+                    <img src="~/images/Small_time.jpg" class="rounded-circle" style="width:30px;" />
+                    tuseTheProgrammer Management System
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#div">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse" id="div">
                     <ul class="navbar-nav">
-
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-action="Index" asp-controller="Home">Home</a>
+                            <a asp-action="Index" asp-controller="Home" class="nav-link text-white">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-action="Create" asp-controller="Employee">Create</a>
+                            <a asp-action="Create" asp-controller="Employee" class="nav-link text-white">Create</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-action="Index" asp-controller="Employee">List Of Employees</a>
+                            <a asp-action="Index" asp-controller="Employee" class="nav-link text-white">Employees</a>
                         </li>
+                        @if (_signInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <a asp-action="Admin" asp-controller="Account" class="nav-link text-white">Admin Only</a>
+                            </li>
+                        }
                     </ul>
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-action="Register" asp-controller="Account">Register</a>
-                        </li>
-                    </ul>
-                    @*@if (_signInManager.IsSignedIn(User))
-                        {*@
-                    @*<ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-page="/RequestForm/Index">Request</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-page="/RequestForm/Index">Processed Request</a>
-                            </li>
-
-                        </ul>
-                        <ul class="navbar-nav ml-auto">
-
-                            <li class="nav-item nav-link text-white">
+                        @if (_signInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item nav-link">
                                 <button class="nav-link btn py-0 btn-link text-white">
-                                    @User.Identity.Name
+                                    Hello, Welcome! @User.Identity.Name
                                 </button>
                             </li>
                             <li class="nav-item nav-link">
-                                <form method="post" asp-page="/RegisterUsers/Index" asp-page-handler="LogOut">
+                                <form method="post" asp-controller="Account" asp-action="LogOut">
                                     <button class="nav-link btn py-0 btn-link text-white" type="submit">
                                         Logout
                                     </button>
                                 </form>
                             </li>
-                        </ul>*@
-
-                    @*}*@
-                    <!--else
-                    {-->
-                    @*<ul class="navbar-nav ml-auto">
+                        }
+                        else
+                        {
                             <li class="nav-item">
-                                <a asp-page="/RegisterUsers/Index" class="nav-link text-white">Register</a>
+                                <a asp-action="LogIn" asp-controller="Account" class="nav-link text-white">LogIn</a>
                             </li>
-                            <li class="nav-item">
-                                <a asp-page="/Login/Index" class="nav-link text-white">Login</a>
-                            </li>
-                        </ul>*@
-                    <!--}-->
 
+                        }
+
+
+                    </ul>
 
                 </div>
             </div>
         </nav>
+
+
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+
+        @RenderBody()
+
     </div>
+    @if (IsSectionDefined("Scripts"))
+    {
+        @RenderSection("Scripts", false);
+    }
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - EFCoreMvc - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
-
-
-
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
 </body>
 </html>
-

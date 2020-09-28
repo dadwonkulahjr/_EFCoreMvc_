@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EFCoreMvc.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,14 +30,20 @@ namespace EFCoreMvc
             services.AddMvc(options =>
             {
                 options.EnableEndpointRouting = false;
+                var policy = new AuthorizationPolicyBuilder()
+                                .RequireAuthenticatedUser()
+                                .Build();
+                options.Filters.Add(new AuthorizeFilter(policy));
 
             });
             services.AddScoped<IEmployeeRepo, SQLRepository>();
-            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            services.AddIdentity<AppUser, IdentityRole>(options =>
             {
-
-
+                options.Password.RequiredUniqueChars = 3;
+                options.Password.RequiredLength = 10;
             }).AddEntityFrameworkStores<ApplicationDbContext>();
+
+
             //services.AddDbContextPool<ApplicationDbContext>(options =>
             //{
             //    options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));

@@ -35,13 +35,20 @@ using EFCoreMvc.Models;
 #nullable disable
 #nullable restore
 #line 5 "C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\Views\_ViewImports.cshtml"
-using EFCoreMvc.ViewModels;
+using EFCoreMvc.AccountModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\Views\_ViewImports.cshtml"
+using EFCoreMvc.ViewsModels;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"08cea82adcc1b8a9866d9e5dcde7e79b03923d7c", @"/Views/Employee/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2e5cc54fb9b2c4f84573baa8bf6ed58c5a3a4692", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"48732ff06cd0ebff11b15b2b68de45286e57402c", @"/Views/_ViewImports.cshtml")]
     public class Views_Employee_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Employee>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -125,7 +132,7 @@ using EFCoreMvc.ViewModels;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n            </h3>\r\n\r\n        </div>\r\n        <div class=\"card-footer\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08cea82adcc1b8a9866d9e5dcde7e79b03923d7c8026", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08cea82adcc1b8a9866d9e5dcde7e79b03923d7c8234", async() => {
                 WriteLiteral("Back");
             }
             );
@@ -144,7 +151,7 @@ using EFCoreMvc.ViewModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08cea82adcc1b8a9866d9e5dcde7e79b03923d7c9480", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08cea82adcc1b8a9866d9e5dcde7e79b03923d7c9688", async() => {
                 WriteLiteral("Edit");
             }
             );
@@ -178,7 +185,7 @@ using EFCoreMvc.ViewModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08cea82adcc1b8a9866d9e5dcde7e79b03923d7c12012", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08cea82adcc1b8a9866d9e5dcde7e79b03923d7c12220", async() => {
                 WriteLiteral("Delete");
             }
             );

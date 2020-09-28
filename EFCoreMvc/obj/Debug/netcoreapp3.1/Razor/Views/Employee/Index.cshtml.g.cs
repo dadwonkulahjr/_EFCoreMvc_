@@ -35,13 +35,20 @@ using EFCoreMvc.Models;
 #nullable disable
 #nullable restore
 #line 5 "C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\Views\_ViewImports.cshtml"
-using EFCoreMvc.ViewModels;
+using EFCoreMvc.AccountModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\Views\_ViewImports.cshtml"
+using EFCoreMvc.ViewsModels;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"39290659193551b22d0ac96ff2658b89742316ae", @"/Views/Employee/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2e5cc54fb9b2c4f84573baa8bf6ed58c5a3a4692", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"48732ff06cd0ebff11b15b2b68de45286e57402c", @"/Views/_ViewImports.cshtml")]
     public class Views_Employee_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Employee>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Create", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -86,7 +93,7 @@ using EFCoreMvc.ViewModels;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<h2 class=\"text-info\">\r\n    List Of Employees\r\n</h2>\r\n<hr />\r\n<div class=\"row mr-1\">\r\n    <div class=\"ml-auto mb-2\">\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "39290659193551b22d0ac96ff2658b89742316ae6901", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "39290659193551b22d0ac96ff2658b89742316ae7109", async() => {
                 WriteLiteral("\r\n            Create new employee\r\n        ");
             }
             );
@@ -177,7 +184,7 @@ using EFCoreMvc.ViewModels;
 #line hidden
 #nullable disable
             WriteLiteral("</td>\r\n                    <td>\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "39290659193551b22d0ac96ff2658b89742316ae10809", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "39290659193551b22d0ac96ff2658b89742316ae11017", async() => {
                 WriteLiteral("Edit");
             }
             );
@@ -211,7 +218,7 @@ using EFCoreMvc.ViewModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "39290659193551b22d0ac96ff2658b89742316ae13362", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "39290659193551b22d0ac96ff2658b89742316ae13570", async() => {
                 WriteLiteral("View");
             }
             );
@@ -245,7 +252,7 @@ using EFCoreMvc.ViewModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "39290659193551b22d0ac96ff2658b89742316ae15918", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "39290659193551b22d0ac96ff2658b89742316ae16126", async() => {
                 WriteLiteral("Delete");
             }
             );

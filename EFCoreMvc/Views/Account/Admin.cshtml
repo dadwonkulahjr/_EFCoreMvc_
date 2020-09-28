@@ -1,0 +1,58 @@
+﻿@model RegisterModel
+@{
+    ViewBag.Title = "Register New User";
+}
+
+<h2 class="text-info">
+    Register New User
+</h2>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="form-group">
+                <label class="col-form-label"  asp-for="Username"></label>
+                <input asp-for="Username" class="form-control" placeholder="Username..." />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="col-form-label"  asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" placeholder="Email..." />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="col-form-label"  asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" placeholder="Password..." />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="col-form-label"  asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password..." />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="col-form-label"  asp-for="Gender"></label>
+                <select asp-for="Gender" asp-items="Html.GetEnumSelectList<Gender>()" class="custom-select">
+                    <option value="">Select your gender</option>
+                </select>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="col-form-label" asp-for="Address"></label>
+                <input asp-for="Address" class="form-control" placeholder="Address..." />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-success">Register</button>
+                <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Back</a>
+            </div>
+
+        </form>
+
+
+
+    </div>
+
+
+</div>

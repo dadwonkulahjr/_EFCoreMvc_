@@ -35,13 +35,20 @@ using EFCoreMvc.Models;
 #nullable disable
 #nullable restore
 #line 5 "C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\Views\_ViewImports.cshtml"
-using EFCoreMvc.ViewModels;
+using EFCoreMvc.AccountModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\Views\_ViewImports.cshtml"
+using EFCoreMvc.ViewsModels;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2e5cc54fb9b2c4f84573baa8bf6ed58c5a3a4692", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"48732ff06cd0ebff11b15b2b68de45286e57402c", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EFCoreMvc.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EFCoreMvc.Controllers
 {
     //[Route("[controller]/[action]")]
+    [Authorize]
     public class EmployeeController : Controller
     {
         private readonly IEmployeeRepo _repository;
@@ -20,6 +22,7 @@ namespace EFCoreMvc.Controllers
         //[Route("")]
         //[Route("~/Home")]
         //[Route("~/")]
+        [AllowAnonymous]
         public ViewResult Index()
         {
             var model = _repository.GetListOfEmployees();
@@ -36,7 +39,7 @@ namespace EFCoreMvc.Controllers
                 return View(employee);
             }
             Response.StatusCode = 404;
-            return View("EmployeeNotFound", id);
+            return View("NotFound", id);
         }
         [HttpPost]
         public IActionResult Edit(Employee employee)
@@ -66,9 +69,9 @@ namespace EFCoreMvc.Controllers
         #region
         //After throwing an Exception
         //for testing purpose.
+        [AllowAnonymous]
         public IActionResult Details(int id)
         {
-            throw new Exception("tuseTheProgrammer just thrown an exception");
             Employee employee = _repository.GetEmployee(id);
             if (employee != null)
             {
@@ -76,7 +79,7 @@ namespace EFCoreMvc.Controllers
             }
 
             Response.StatusCode = 404;
-            return View("EmployeeNotFound", id);
+            return View("NotFound", id);
 
         }
         #endregion
@@ -89,7 +92,7 @@ namespace EFCoreMvc.Controllers
                 return View(employee);
             }
             Response.StatusCode = 404;
-            return View("EmployeeNotFound", id);
+            return View("NotFound", id);
         }
         [HttpPost]
         public IActionResult Delete(Employee model)
@@ -100,7 +103,7 @@ namespace EFCoreMvc.Controllers
                 return RedirectToAction("Index", "Employee");
             }
             Response.StatusCode = 404;
-            return View("EmployeeNotFound", model.EmployeeId);
+            return View("NotFound", model.EmployeeId);
         }
     }
 }

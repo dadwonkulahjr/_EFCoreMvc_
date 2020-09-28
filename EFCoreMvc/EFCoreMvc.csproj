@@ -17,6 +17,16 @@
     <Compile Remove="Migrations\20200924060115_AddSomeTestProperty.Designer.cs" />
     <Compile Remove="Migrations\20200924131703_AddingDepartment.cs" />
     <Compile Remove="Migrations\20200924131703_AddingDepartment.Designer.cs" />
+    <Compile Remove="Migrations\20200924135807_AddDepartment.cs" />
+    <Compile Remove="Migrations\20200924135807_AddDepartment.Designer.cs" />
+    <Compile Remove="Migrations\20200924140110_AddingInitialSeedData.cs" />
+    <Compile Remove="Migrations\20200924140110_AddingInitialSeedData.Designer.cs" />
+    <Compile Remove="Migrations\20200925120724_IdentityDbContextMigrationAdded.cs" />
+    <Compile Remove="Migrations\20200925120724_IdentityDbContextMigrationAdded.Designer.cs" />
+    <Compile Remove="Migrations\20200928035739_Extending_IdentityUserClass.cs" />
+    <Compile Remove="Migrations\20200928035739_Extending_IdentityUserClass.Designer.cs" />
+    <Compile Remove="Migrations\20200928040011_Extend_IdentityUser.cs" />
+    <Compile Remove="Migrations\20200928040011_Extend_IdentityUser.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
