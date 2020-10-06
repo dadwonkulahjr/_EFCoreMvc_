@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EFCoreMvc.Controllers
 {
+   
     public class AccountController : Controller
     {
         private readonly SignInManager<AppUser> _signInManager;
@@ -20,43 +21,6 @@ namespace EFCoreMvc.Controllers
         {
             _signInManager = signInManager;
             _userManager = userManager;
-        }
-
-        [HttpGet]
-        [AllowAnonymous]
-        public IActionResult Admin()
-        {
-            return View();
-        }
-        [AllowAnonymous]
-        [HttpPost]
-        public async Task<IActionResult> Admin(RegisterModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                AppUser identityUser = new AppUser()
-                {
-                    UserName = model.Username,
-                    Email = model.Email,
-                    Gender = model.Gender,
-                    Address = model.Address
-                };
-                //Perform magic here!
-                var result = await _userManager.CreateAsync(identityUser, model.Password);
-                if (result.Succeeded)
-                {
-                    //Perform magic here!
-                    await _signInManager.SignInAsync(identityUser, isPersistent: false);
-                    return RedirectToAction("Index", "Employee");
-                }
-
-                foreach (var item in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, item.Description);
-                }
-
-            }
-            return View(model);
         }
 
         [HttpPost]
@@ -113,5 +77,7 @@ namespace EFCoreMvc.Controllers
                 return Json($"The username {model.Username} has already been taken by somebody in the system.");
             }
         }
+
+       
     }
 }

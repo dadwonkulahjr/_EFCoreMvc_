@@ -2,24 +2,37 @@
     ViewBag.Title = "Error";
 }
 
-<h2 class="text-info">
-    Error
-</h2>
-<hr />
-<h3>
-    Hey please be calm our IT guys are aware
-    they will soon resolve you problems!
-</h3>
+@if (ViewBag.ErrorTitle == null)
+{
+    <h2 class="text-info">
+        Error
+    </h2>
+    <hr />
+    <h3>
+        Hey please be calm our IT guys are aware
+        they will soon resolve you problems!
+    </h3>
 
-<div class="alert alert-primary">
-    <h5>
-        Or you can contact us on the following email <b>tuseTheProgrammer.gmail.com</b>
-    </h5>
+    <div class="alert alert-primary">
+        <h5>
+            Or you can contact us on the following email <b>tuseTheProgrammer.gmail.com</b>
+        </h5>
 
+    </div>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">
+        Click the link to back home
+    </a>
+}
+else
+{
+
+<div class="text-center">
+    <h1 class="text-danger">@ViewBag.ErrorTitle</h1>
+    <hr />
+    <h6 class="text-danger">@ViewBag.ErrorMessage</h6>
+    <img src="~/images/no-access-denied.jpeg" width="500" />
 </div>
-<a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">
-    Click the link to back home
-</a>
+}
 
 @*<h6>
         Error Message : @ViewData["ExceptionMessage"]

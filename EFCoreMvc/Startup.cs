@@ -36,6 +36,25 @@ namespace EFCoreMvc
                 options.Filters.Add(new AuthorizeFilter(policy));
 
             });
+            services.ConfigureApplicationCookie(configure: options =>
+             {
+                 options.AccessDeniedPath = new PathString("/Admin/AccessDenied");
+             });
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("DeleteRolePolicy", a => a.RequireClaim("Delete Role")
+                    .RequireClaim("Create Role"));
+                options.AddPolicy("AdminRolePolicy", options =>
+                {
+                    options.RequireRole("Admin");
+                });
+                options.AddPolicy("EditRolePolicy",
+                    options =>
+                    {
+                        options.RequireClaim("Edit Role", "true");
+                    });
+            });
+            
             services.AddScoped<IEmployeeRepo, SQLRepository>();
             services.AddIdentity<AppUser, IdentityRole>(options =>
             {

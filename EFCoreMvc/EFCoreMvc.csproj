@@ -23,10 +23,14 @@
     <Compile Remove="Migrations\20200924140110_AddingInitialSeedData.Designer.cs" />
     <Compile Remove="Migrations\20200925120724_IdentityDbContextMigrationAdded.cs" />
     <Compile Remove="Migrations\20200925120724_IdentityDbContextMigrationAdded.Designer.cs" />
+    <Compile Remove="Migrations\20200928015156_AddingIdentityDbContext.cs" />
+    <Compile Remove="Migrations\20200928015156_AddingIdentityDbContext.Designer.cs" />
     <Compile Remove="Migrations\20200928035739_Extending_IdentityUserClass.cs" />
     <Compile Remove="Migrations\20200928035739_Extending_IdentityUserClass.Designer.cs" />
     <Compile Remove="Migrations\20200928040011_Extend_IdentityUser.cs" />
     <Compile Remove="Migrations\20200928040011_Extend_IdentityUser.Designer.cs" />
+    <Compile Remove="Migrations\20200928040311_Extend_IdentityUser.cs" />
+    <Compile Remove="Migrations\20200928040311_Extend_IdentityUser.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -22,7 +22,7 @@ namespace EFCoreMvc.Controllers
         //[Route("")]
         //[Route("~/Home")]
         //[Route("~/")]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public ViewResult Index()
         {
             var model = _repository.GetListOfEmployees();

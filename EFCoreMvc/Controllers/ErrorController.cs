@@ -38,6 +38,7 @@ namespace EFCoreMvc.Controllers
         public IActionResult Error()
         {
             var result = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
+          
             ViewData["ExceptionMessage"] = result.Error.Message;
             _logger.LogError($"Error message: {result.Error.Message}" +
                 $"ExceptionPath: {result.Path}" +

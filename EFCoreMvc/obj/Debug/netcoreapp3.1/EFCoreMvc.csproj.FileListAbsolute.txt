@@ -157,9 +157,14 @@ C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\n
 C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Shared\ErrorHandler.cshtml.g.cs
 C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Account\LogIn.cshtml.g.cs
-C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Account\Admin.cshtml.g.cs
 C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Admin\CreateRole.cshtml.g.cs
 C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ListRoles.cshtml.g.cs
 C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Admin\EditRole.cshtml.g.cs
 C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Shared\NotFound.cshtml.g.cs
 C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Admin\EditUserInRole.cshtml.g.cs
+C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ListUsers.cshtml.g.cs
+C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Register.cshtml.g.cs
+C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Admin\EditAspUser.cshtml.g.cs
+C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ManageUsersInRole.cshtml.g.cs
+C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ManageUserClaims.cshtml.g.cs
+C:\Users\Dad S. Wonkulah Jr\source\repos\EFCoreMvcPractice\EFCoreMvc\obj\Debug\netcoreapp3.1\Razor\Views\Admin\AccessDenied.cshtml.g.cs
